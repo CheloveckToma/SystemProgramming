@@ -1,17 +1,21 @@
-package ru.kav.systemprogramming.mathinteger;
+package ru.kav.systemprogramming.calculatorwithconsel;
 
 import java.util.Scanner;
 
-public class MainOfMathInteger {
+public class MainOfCalculator {
 
     public static void main(String[] args) {
         System.out.println("Enter an example");
+
         try {
             String expression = inputWithConsel();
-            MathInteger.dataCheckWithConsole(expression);
-            MathInteger.someOperationWithExpression(expression);
-                int result = MathInteger.calculator(MathInteger.firstNumber,MathInteger.secondNumber);
-                System.out.println("Ответ: " + result);
+            DataCheck.dataCheckWithConsole(expression);
+            String[] splitedExpression = Split.splitListOfExpression(expression);
+            int firstOperand = IntegerInNumbers.integerStringMassive(splitedExpression,0);
+            int secondOperand = IntegerInNumbers.integerStringMassive(splitedExpression,2);
+            String sign = splitedExpression[1];
+            int result = ChooseOperation.calculations(firstOperand,secondOperand,sign);
+            System.out.println("Ответ: " + result);
 
         } catch (ArithmeticException e) {
             e.printStackTrace();
@@ -22,6 +26,7 @@ public class MainOfMathInteger {
         }
 
     }
+
     public static String inputWithConsel() {
         Scanner scanner = new Scanner(System.in);
         String expression = scanner.nextLine();
