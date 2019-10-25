@@ -5,6 +5,7 @@ public class Start {
         ConflictEggAndChicken egg = new ConflictEggAndChicken("egg");
         ConflictEggAndChicken chicken = new ConflictEggAndChicken("chicken");
 
+
         try {
             egg.thread.join();
         } catch (InterruptedException e) {

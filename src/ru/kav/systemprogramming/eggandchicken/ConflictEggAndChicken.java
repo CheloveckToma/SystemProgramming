@@ -4,6 +4,7 @@ public class ConflictEggAndChicken implements Runnable {
 
     Thread thread;
 
+
     public ConflictEggAndChicken(String name) {
         thread = new Thread(this, name);
         thread.start();
