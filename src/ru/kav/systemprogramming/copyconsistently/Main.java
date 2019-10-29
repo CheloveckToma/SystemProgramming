@@ -15,7 +15,7 @@ public class Main {
         FileWrite.fileWrite(textToWrite, "src\\\\ru\\\\kav\\\\systemprogramming\\\\copywithoutnio\\\\fileTwo.txt");
 
         long secondTime = System.currentTimeMillis();
-        System.out.println(secondTime - firstTime);
+        System.out.println("Время выполнения программы: " + (secondTime-firstTime));
 
     }
 }

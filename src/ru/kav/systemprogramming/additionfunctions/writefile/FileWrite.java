@@ -15,9 +15,8 @@ public class FileWrite {
 
     public static void fileWrite(ArrayList listOfResults, String path) {
 
-        try {
-            FileWriter fileWriter = new FileWriter(path);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        try(FileWriter fileWriter = new FileWriter(path); BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+
 
             for (int i = 0; i < listOfResults.size(); i++) {
                 bufferedWriter.write(listOfResults.get(i) + "\n");

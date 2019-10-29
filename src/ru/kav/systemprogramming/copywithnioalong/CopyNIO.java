@@ -8,10 +8,11 @@ import java.nio.file.StandardCopyOption;
 
 public class CopyNIO extends Thread {
 String path;
+
     CopyNIO(String path){
         this.path = path;
-        start();
     }
+
     public void run(){
         long firstTime = System.currentTimeMillis();
         try {

@@ -13,7 +13,6 @@ public class CopyFile extends Thread {
     CopyFile(String pathForRead, String pathForWrite) {
         this.pathForRead = pathForRead;
         this.pathForWrite = pathForWrite;
-        start();
     }
 
     public void run() {
@@ -21,6 +20,6 @@ public class CopyFile extends Thread {
         ArrayList text = FileRead.readFile(pathForRead);
         FileWrite.fileWrite(text, pathForWrite);
         long secondTime = System.currentTimeMillis();
-        System.out.println("Время выполнения:" + (secondTime - firstTime)+" мс");
+        System.out.println("Время выполнения:" + (secondTime - firstTime) + " мс");
     }
 }
