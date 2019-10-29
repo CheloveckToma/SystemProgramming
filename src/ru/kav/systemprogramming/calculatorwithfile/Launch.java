@@ -23,7 +23,7 @@ public class Launch {
 
             String expression = Split.splitListOfExpression(listOfExpressions, i);
 
-            if (DataCheck.dataFileCheck(expression)) {
+            if (DataCheck.fileDataCheck(expression)) {
                 String[] abc = Split.splitListOfExpression(expression);
                 listOfResults.add(ChooseOperation.calculations(IntegerInNumbers.integerStringMassive(abc,0), IntegerInNumbers.integerStringMassive(abc,2), abc[1]));
             } else {

@@ -1,5 +1,8 @@
 package ru.kav.systemprogramming.calculatorwithfile;
 
+import ru.kav.systemprogramming.additionfunctions.readfile.FileRead;
+import ru.kav.systemprogramming.additionfunctions.writefile.FileWrite;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,7 +18,7 @@ public class Main {
             listOfExpressions = FileRead.readFile(sc.nextLine());
             ArrayList listOfResults = new ArrayList();
             listOfResults = Launch.сalculations(listOfExpressions);
-            //src\\ru\\kav\\systemprogramming\\mathIntegerwithfile\\fileOne.txt
+            //src\\ru\\kav\\systemprogramming\\mathIntegerwithfile\\fileOne.txt.txt
             System.out.println("Введите путь для файла вывода");
             FileWrite.fileWrite(listOfResults, sc.nextLine());
             //src\\ru\\kav\\systemprogramming\\mathIntegerwithfile\\fileTwo.txt
